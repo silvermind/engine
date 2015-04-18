@@ -24,7 +24,13 @@ module Locomotive
           self.redirect_to_locomotive_page and return
         end
 
-        render_no_page_error and return if @page.nil?
+        Rails.logger.info "path: #{path)"
+        Rails.logger.info "request.fullpath: #{request.fullpath)"
+        
+        if @page.nil?
+          Rollbar.error "Page not found: #{path}"
+          render_no_page_error and return 
+        end
 
         output = @page.render(self.locomotive_context(assigns))
 
@@ -112,6 +118,8 @@ module Locomotive
 
       path = self.sanitize_locomotive_page_path(path)
 
+      Rails.logger.info "lookup path: #{path)"
+        
       current_site.fetch_page path, current_locomotive_account.present?
     end
 
