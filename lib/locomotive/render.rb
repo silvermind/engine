@@ -118,7 +118,7 @@ module Locomotive
 
       path = self.sanitize_locomotive_page_path(path)
 
-      Rails.logger.info "lookup path: #{path)"
+      Rails.logger.info "lookup path: #{path}"
         
       current_site.fetch_page path, current_locomotive_account.present?
     end
