@@ -24,8 +24,8 @@ module Locomotive
           self.redirect_to_locomotive_page and return
         end
 
-        Rails.logger.info "path: #{path)"
-        Rails.logger.info "request.fullpath: #{request.fullpath)"
+        Rails.logger.info "path: #{path}"
+        Rails.logger.info "request.fullpath: #{request.fullpath}"
         
         if @page.nil?
           Rollbar.error "Page not found: #{path}"
