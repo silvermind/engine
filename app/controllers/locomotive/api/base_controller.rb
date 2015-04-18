@@ -60,6 +60,9 @@ module Locomotive
       end
 
       def render_access_denied(exception)
+        
+        Rollbar.error(exception)
+        
         status = (case exception
         when ::CanCan::AccessDenied               then 401
         when ::Mongoid::Errors::DocumentNotFound  then 404
