@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'mime-types',                      '~> 1.19'
   s.add_dependency 'custom_fields',                   '~> 2.3.2'
 
-  s.add_dependency 'kaminari',                        '~> 0.14.1'
+  s.add_dependency 'kaminari',                        '~> 0.15'
 
   s.add_dependency 'haml',                            '~> 4.0.2'
   s.add_dependency 'jquery-rails',                    '~> 2.1.4'
@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'compass-rails',                   '~> 2.0.0'
 
   s.add_dependency 'locomotivecms_solid',             '~> 0.2.2'
-  s.add_dependency 'formtastic',                      '~> 2.2.1'
+  s.add_dependency 'formtastic',                      '~> 3.1.0'
   s.add_dependency 'responders',                      '~> 0.9.2'
   s.add_dependency 'cells',                           '~> 3.8.0'
   s.add_dependency 'RedCloth',                        '~> 4.2.8'
