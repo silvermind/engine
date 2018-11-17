@@ -28,7 +28,7 @@ module Locomotive
         # Rails.logger.info "request.fullpath: #{request.fullpath}"
         
         if @page.nil?
-          Rollbar.error "Page not found: #{path}"
+          # Rollbar.error "Page not found: #{path}"
           render_no_page_error and return 
         end
 

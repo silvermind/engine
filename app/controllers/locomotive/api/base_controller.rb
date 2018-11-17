@@ -61,7 +61,7 @@ module Locomotive
 
       def render_access_denied(exception)
         
-        Rollbar.error(exception)
+        # Rollbar.error(exception)
         
         status = (case exception
         when ::CanCan::AccessDenied               then 401
